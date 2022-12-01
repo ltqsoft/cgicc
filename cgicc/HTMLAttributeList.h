@@ -48,7 +48,7 @@ namespace cgicc {
   // Class HTMLAttributeList
   // ============================================================
   
-#ifdef WIN32
+#if defined(WIN32) && defined(CGICC_IMPORTS)
   template class CGICC_API std::vector<HTMLAttribute>;
 #endif
   

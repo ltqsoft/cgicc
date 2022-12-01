@@ -51,7 +51,7 @@
 
 namespace cgicc {
   
-#ifdef WIN32
+#if defined(WIN32) && defined(CGICC_IMPORTS)
   template class CGICC_API std::vector<FormEntry>;
   template class CGICC_API std::vector<FormFile>;
 #endif

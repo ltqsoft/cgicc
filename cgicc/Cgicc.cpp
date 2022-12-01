@@ -96,7 +96,7 @@ namespace cgicc {
   // "The C++ Programming Language, Third Edition" by Bjarne Stroustrup
   template<class In, class Out, class Pred>
   Out 
-  copy_if(In first, 
+  cgicc_copy_if(In first, 
 	  In last, 
 	  Out res, 
 	  Pred p)
@@ -324,11 +324,11 @@ cgicc::Cgicc::findEntries(const std::string& param,
   result.clear();
 
   if(byName) {
-    copy_if(fFormData.begin(), fFormData.end(), 
+    cgicc_copy_if(fFormData.begin(), fFormData.end(), 
 	    std::back_inserter(result),FE_nameCompare(param));
   }
   else {
-    copy_if(fFormData.begin(), fFormData.end(), 
+    cgicc_copy_if(fFormData.begin(), fFormData.end(), 
 	    std::back_inserter(result), FE_valueCompare(param));
   }
 
